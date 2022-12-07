@@ -1,5 +1,12 @@
 import React from "react";
+import { SearchForm } from "../../components/form/searchForm/SearchForm";
+import './home.scss'
 
 export const Home = () => {
-  return <div>Home</div>;
+  return (
+    <section >
+     
+      <SearchForm />
+    </section>
+  );
 };

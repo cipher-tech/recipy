@@ -1,6 +1,5 @@
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
 import { Home } from "./pages/home/Home";
 import { RecipeDetail } from "./pages/recipeDetail/RecipeDetail";
 import { RecipesList } from "./pages/recipesList/RecipesList";
