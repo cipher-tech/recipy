@@ -1,0 +1,12 @@
+.recipes{
+
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 3rem;
+
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3.2rem;
+    }
+}
