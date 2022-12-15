@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { Layout } from "../Layout";
 import { Home } from "./pages/home/Home";
 import { RecipeDetail } from "./pages/recipeDetail/RecipeDetail";
-import { Recipes } from "./pages/recipes/Recipes";
+import { RecipesPage } from "./pages/recipesPage/RecipesPage";
 
 export const App = () => {
   return (
@@ -11,7 +11,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" index element={<Home />} />
-          <Route path="recipes" element={<Recipes />} />
+          <Route path="recipes" element={<RecipesPage />} />
           <Route path="recipes/:id" element={<RecipeDetail />} />
         </Route>
       </Routes>

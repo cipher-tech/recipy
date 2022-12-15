@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import "./searchform.scss";
 import axios from "axios";
 
@@ -9,6 +9,8 @@ export const SearchForm = () => {
   //methods
   const handleSubmit = (e) => {
     e.preventDefault();
+    getRecipesResult(query);
+    setQuery("");
   };
 
   const handleChange = (e) => {
@@ -17,7 +19,7 @@ export const SearchForm = () => {
     console.log(query);
   };
 
-  const getRecipes = async () => {
+  const getRecipe = async () => {
     const url =
       "https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886";
     const res = await axios.get(url);
@@ -25,26 +27,37 @@ export const SearchForm = () => {
     setRecipes(res.data.data);
   };
 
+  const getRecipesResult = async (query) => {
+    const url = `https://forkify-api.herokuapp.com/api/v2/recipes?search=${query}`;
+    const res = await axios.get(url);
+    console.log(res.data.data.recipes);
+    setRecipes(res.data.data.recipes);
+  };
+
   useEffect(() => {
-    getRecipes();
+    // getRecipe();
+    // getRecipesResult(query);
   }, []);
 
   return (
-    <form className="search-form" onSubmit={handleSubmit}>
-      <div className="search-group">
-        <input
-          className="search-field"
-          type="text"
-          placeholder="Search recipes"
-          onChange={handleChange}
-          value={query}
-        />
-        <i>X</i>
-      </div>
-      <button className="search-btn" onClick={() => dispatch(toggleModal())}>
-        <i>icon</i>
-        <span>Search</span>
-      </button>
-    </form>
+    <Fragment>
+      <form className="search-form" onSubmit={handleSubmit}>
+        <div className="search-group">
+          <input
+            className="search-field"
+            type="text"
+            placeholder="Search recipes"
+            onChange={handleChange}
+            value={query}
+          />
+          <i>X</i>
+        </div>
+        <button className="search-btn">
+          <i>icon</i>
+          <span>Search</span>
+        </button>
+      </form>
+      {/* <recipes /> */}
+    </Fragment>
   );
 };
