@@ -1,6 +1,6 @@
 import React, { useReducer, createContext } from "react";
 import axios from "axios";
-import { GET_SEARCH_RECIPE } from "../actionTypes";
+import { GET_SEARCH_RECIPE, RECIPE_ERROR } from "../actionTypes";
 import { recipeReducer } from "./recipeReducer";
 export const RecipeContext = createContext();
 
