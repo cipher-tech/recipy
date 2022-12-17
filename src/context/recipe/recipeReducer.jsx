@@ -1,21 +1,16 @@
+import { GET_RECIPE, GET_SEARCH_RECIPE } from "../actionTypes";
+
 export const recipeReducer = (state, action) => {
   switch (action.type) {
-    case GET_CONTACTS:
+    case GET_SEARCH_RECIPE:
       return {
         ...state,
-        contacts: action.payload,
+        recipes: action.payload,
       };
-    case ADD_CONTACT:
+    case GET_RECIPE:
       return {
         ...state,
-        contacts: [action.payload, ...state.contacts],
-      };
-    case UPDATE_CONTACT:
-      return {
-        ...state,
-        contacts: state.contacts.map((contact) =>
-          contact._id === action.payload._id ? action.payload : contact
-        ),
+        recipe: action.payload,
       };
   }
 };
