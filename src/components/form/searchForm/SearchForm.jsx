@@ -1,18 +1,17 @@
 import React, { useState, useEffect, Fragment, useContext } from "react";
-import "./searchform.scss";
-import axios from "axios";
 import { RecipeContext } from "../../../context/recipe/RecipeProvider";
+import "./searchForm.scss";
 
 export const SearchForm = () => {
+    //context hook
   const { getSearchRecipes } = useContext(RecipeContext);
 
   //hooks
   const [query, setQuery] = useState("");
-  const [recipes, setRecipes] = useState([]);
+
   //methods
   const handleSubmit = (e) => {
     e.preventDefault();
-    // getRecipesResult(query);
     setQuery("");
   };
 
@@ -22,23 +21,20 @@ export const SearchForm = () => {
     console.log(query);
   };
 
-  //   const getRecipe = async () => {
-  //     const url =
-  //       "https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886";
-  //     const res = await axios.get(url);
-  //     console.log(res.data.data);
-  //     setRecipes(res.data.data);
-  //   };
 
-  //   const getRecipesResult = async (query) => {
-  //     const url = `https://forkify-api.herokuapp.com/api/v2/recipes?search=${query}`;
-  //     const res = await axios.get(url);
-  //     console.log(res.data.data.recipes);
-  //     setRecipes(res.data.data.recipes);
-  //   };
+//   useEffect(() => {
+//     getSearchRecipes(query);
+//   }, [query]);
 
-  useEffect(() => {
-    getSearchRecipes(query);
+  
+   useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      if (query) getSearchRecipes(query);
+    }, 500);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, [query]);
 
   return (
