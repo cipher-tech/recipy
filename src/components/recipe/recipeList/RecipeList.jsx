@@ -6,7 +6,6 @@ import { RecipeContext } from "../../../context/recipe/RecipeProvider";
 
 export const RecipeList = () => {
   const { recipes } = useContext(RecipeContext);
-  console.log(recipes);
 
   return (
     <section className="recipes">

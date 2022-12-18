@@ -25,7 +25,11 @@ export const RecipeProvider = ({ children }) => {
         payload: res.data.data.recipes,
       });
     } catch (err) {
-      console.error(err);
+      console.log(err);
+      dispatch({
+        type: RECIPE_ERROR,
+        payload: err.message,
+      });
     }
   };
 
@@ -39,7 +43,10 @@ export const RecipeProvider = ({ children }) => {
         payload: res.data.data.recipe,
       });
     } catch (err) {
-      console.error(err);
+      dispatch({
+        type: RECIPE_ERROR,
+        payload: err.message,
+      });
     }
   };
 
