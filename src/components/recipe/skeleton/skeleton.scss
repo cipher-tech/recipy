@@ -1,0 +1,30 @@
+  .skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+    padding: 2rem;
+
+    @keyframes skeleton-loading {
+      0% {
+        background-color: #fff;
+      }
+      100% {
+        background-color: #f3f3f3;
+      }
+    }
+  }
+
+  .image {
+    background-color: #fff;
+    height: 20rem;
+  }
+
+  .content {
+    padding: 2rem;
+  }
+
+  .skeleton-span {
+    display: block;
+    background-color: #f3f3f3;
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 1rem;
+  }
