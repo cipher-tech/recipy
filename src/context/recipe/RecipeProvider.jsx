@@ -8,7 +8,7 @@ export const RecipeProvider = ({ children }) => {
   const initialState = {
     recipes: [],
     recipe: {},
-    loading: false,
+    loading: true,
   };
 
   const [state, dispatch] = useReducer(recipeReducer, initialState);
