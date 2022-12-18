@@ -4,7 +4,7 @@ import "./recipeitem.scss";
 
 export const RecipeItem = ({ recipe }) => {
   return (
-    <Link>
+    <Link to={`/recipes/${recipe?.id}`}>
       <article className="recipe">
         <div className="recipe__img-box">
           {/* <img src="/public/gallery-12.jpg" alt="recipe image" /> */}

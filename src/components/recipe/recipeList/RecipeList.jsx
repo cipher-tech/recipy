@@ -5,7 +5,8 @@ import { datas, data2 } from "../../../../datas";
 import { RecipeContext } from "../../../context/recipe/RecipeProvider";
 
 export const RecipeList = () => {
-  const { loading, recipes } = useContext(RecipeContext);
+  const { recipes } = useContext(RecipeContext);
+  console.log(recipes);
 
   return (
     <section className="recipes">
@@ -17,12 +18,13 @@ export const RecipeList = () => {
     </section>
   );
 };
+
 // export const RecipeList = () => {
 //   return (
 //     <section className="recipes">
 //       <ul className="recipes__container">
-//         {data2.map((data) => (
-//           <RecipeItem data={data} />
+//         {data2.map((recipe) => (
+//           <RecipeItem recipe={recipe} />
 //         ))}
 //       </ul>
 //     </section>
