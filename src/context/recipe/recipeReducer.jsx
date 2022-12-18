@@ -6,11 +6,13 @@ export const recipeReducer = (state, action) => {
       return {
         ...state,
         recipes: action.payload,
+        loading: false
       };
     case GET_RECIPE:
       return {
         ...state,
         recipe: action.payload,
+        loading: false
       };
   }
 };
