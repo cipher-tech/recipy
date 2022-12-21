@@ -6,7 +6,7 @@ import { RecipeContext } from "../../context/recipe/RecipeProvider";
 import "./recipeDetail.scss";
 
 export const RecipeDetail = () => {
-  const { getRecipe } = useContext(RecipeContext);
+  const { getRecipe, recipe } = useContext(RecipeContext);
   const { id } = useParams();
 
   useEffect(() => {
@@ -17,9 +17,9 @@ export const RecipeDetail = () => {
     <section>
       <div className="container">
         <div className="content">
-          <h1>Title</h1>
+          <h1>{recipe?.title}</h1>
           <div className="img-box">
-            <img src="" alt="recipe img" />
+            <img src={recipe?.image_url} alt="recipe img" />
           </div>
 
           <div className="recipe-content">
@@ -54,12 +54,12 @@ export const RecipeDetail = () => {
               <h2 className="heading--2">How to cook it</h2>
               <p className="recipe__directions-text">
                 This recipe was carefully designed and tested by
-                <span className="recipe__publisher">The Pioneer Woman</span>.
+                <span className="recipe__publisher"> {recipe?.publisher}</span>.
                 Please check out directions at their website.
               </p>
               <a
                 className="btn--small recipe__btn"
-                href="http://thepioneerwoman.com/cooking/pasta-with-tomato-cream-sauce/"
+                href={recipe?.source_url}
                 target="_blank"
               >
                 <span>Directions</span>
