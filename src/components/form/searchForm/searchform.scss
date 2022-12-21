@@ -6,7 +6,7 @@
     align-items: center;
     background-color: #fff;
     border-radius: 10rem;
-    padding-left: 3rem;
+    padding: 0 3rem 0 3rem;
     transition: all 0.3s;
     border: 1px solid black;
     margin-bottom: 2rem;
@@ -28,19 +28,7 @@
     outline: none;
     padding: 1rem;
   }
-  &-group {
-    display: flex;
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 10rem;
 
-    @include respond(phoneMax600) {
-      width: 100%;
-    }
-  }
   &-btn {
     font-weight: 700;
     border-radius: 10rem;
@@ -59,5 +47,5 @@
 .clear-btn {
   border: 1px solid black;
   padding: 1rem;
-  border-radius: 8rem;
+  border-radius: 50%;
 }
