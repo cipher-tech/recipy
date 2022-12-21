@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment, useContext } from "react";
 import { RecipeContext } from "../../../context/recipe/RecipeProvider";
+import { Icon } from "../../atoms/icon/Icon";
 import "./searchForm.scss";
 
 export const SearchForm = () => {
@@ -48,14 +49,7 @@ export const SearchForm = () => {
         <span className="clear-btn">
           <i>X</i>
         </span>
-        {/* <div className="search-group">
-        </div> */}
-        {/* <button className="search-btn">
-          <i>icon</i>
-          <span>Search</span>
-        </button> */}
-      </form>
-      {/* <recipes /> */}
+      </form> 
     </Fragment>
   );
 };
