@@ -1,9 +1,10 @@
 import React, { useState, useEffect, Fragment, useContext } from "react";
 import { RecipeContext } from "../../../context/recipe/RecipeProvider";
+import { Icon } from "../../atoms/icon/Icon";
 import "./searchForm.scss";
 
 export const SearchForm = () => {
-    //context hook
+  //context hook
   const { getSearchRecipes } = useContext(RecipeContext);
 
   //hooks
@@ -21,13 +22,11 @@ export const SearchForm = () => {
     console.log(query);
   };
 
+  //   useEffect(() => {
+  //     getSearchRecipes(query);
+  //   }, [query]);
 
-//   useEffect(() => {
-//     getSearchRecipes(query);
-//   }, [query]);
-
-  
-   useEffect(() => {
+  useEffect(() => {
     const timeoutId = setTimeout(() => {
       if (query) getSearchRecipes(query);
     }, 500);
@@ -51,7 +50,7 @@ export const SearchForm = () => {
           <i>X</i>
         </div>
         <button className="search-btn">
-          <i>icon</i>
+          <Icon icon="user" />
           <span>Search</span>
         </button>
       </form>
