@@ -39,22 +39,17 @@ export const SearchForm = () => {
   return (
     <Fragment>
       <form className="search-form" onSubmit={handleSubmit}>
-        <div className="search-group">
-          <input
-            className="search-field"
-            type="text"
-            placeholder="Search recipes"
-            onChange={handleChange}
-            value={query}
-          />
+        <input
+          className="search-field"
+          type="text"
+          placeholder="Search recipes"
+          onChange={handleChange}
+          value={query}
+        />
+        <span className="clear-btn">
           <i>X</i>
-        </div>
-        <button className="search-btn">
-          <Icon icon="user" />
-          <span>Search</span>
-        </button>
-      </form>
-      {/* <recipes /> */}
+        </span>
+      </form> 
     </Fragment>
   );
 };
