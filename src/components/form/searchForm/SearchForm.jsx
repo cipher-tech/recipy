@@ -3,7 +3,7 @@ import { RecipeContext } from "../../../context/recipe/RecipeProvider";
 import "./searchForm.scss";
 
 export const SearchForm = () => {
-    //context hook
+  //context hook
   const { getSearchRecipes } = useContext(RecipeContext);
 
   //hooks
@@ -21,13 +21,11 @@ export const SearchForm = () => {
     console.log(query);
   };
 
+  //   useEffect(() => {
+  //     getSearchRecipes(query);
+  //   }, [query]);
 
-//   useEffect(() => {
-//     getSearchRecipes(query);
-//   }, [query]);
-
-  
-   useEffect(() => {
+  useEffect(() => {
     const timeoutId = setTimeout(() => {
       if (query) getSearchRecipes(query);
     }, 500);
@@ -40,20 +38,22 @@ export const SearchForm = () => {
   return (
     <Fragment>
       <form className="search-form" onSubmit={handleSubmit}>
-        <div className="search-group">
-          <input
-            className="search-field"
-            type="text"
-            placeholder="Search recipes"
-            onChange={handleChange}
-            value={query}
-          />
+        <input
+          className="search-field"
+          type="text"
+          placeholder="Search recipes"
+          onChange={handleChange}
+          value={query}
+        />
+        <span className="clear-btn">
           <i>X</i>
-        </div>
-        <button className="search-btn">
+        </span>
+        {/* <div className="search-group">
+        </div> */}
+        {/* <button className="search-btn">
           <i>icon</i>
           <span>Search</span>
-        </button>
+        </button> */}
       </form>
       {/* <recipes /> */}
     </Fragment>

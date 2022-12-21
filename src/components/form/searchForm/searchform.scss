@@ -1,17 +1,15 @@
+@import "../../../styles/abstract/mixin";
+
 .search {
- 
   &-form {
     display: flex;
     align-items: center;
-    background-color: blue;
     background-color: #fff;
     border-radius: 10rem;
     padding-left: 3rem;
     transition: all 0.3s;
-
-	border: 1px solid black;
-    margin: 2rem;
-	width: fit-content;
+    border: 1px solid black;
+    margin-bottom: 2rem;
 
     &:focus-within {
       box-shadow: 0 1rem 5rem rgba(36, 106, 60, 0.15);
@@ -26,8 +24,9 @@
     color: inherit;
     font-size: 1.7rem;
     width: 100%;
-	border: none;
-	outline: none;
+    border: none;
+    outline: none;
+    padding: 1rem;
   }
   &-group {
     display: flex;
@@ -35,21 +34,30 @@
     display: flex;
     gap: 1rem;
     padding: 1rem;
-    background-color: #fff;;
-    border-radius: 1.2rem;
-	width: 30rem;
-}
-&-btn {
-	font-weight: 700;
+    background-color: #fff;
+    border-radius: 10rem;
+
+    @include respond(phoneMax600) {
+      width: 100%;
+    }
+  }
+  &-btn {
+    font-weight: 700;
     border-radius: 10rem;
     text-transform: uppercase;
     cursor: pointer;
     padding: 1.2rem 3.2rem;
     transition: all 0.3s;
-	background: green;
-	border: none;
+    background: green;
+    border: none;
 
     display: flex;
     align-items: center;
   }
+}
+
+.clear-btn {
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 8rem;
 }
