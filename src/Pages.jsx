@@ -1,15 +1,16 @@
 import { Route, Routes } from "react-router-dom";
-import { Layout } from "../../Layout";
+import { Layout } from "../Layout";
 //pages
-import { Home } from "./home/Home";
-import { RecipeDetail } from "./recipeDetail/RecipeDetail";
-import { RecipesPage } from "./recipesPage/RecipesPage.jsx";
+import { Home } from "./pages/home/Home";
+import { RecipeDetail } from "./pages/recipeDetail/RecipeDetail";
+import { RecipesPage } from "./pages/recipesPage/RecipesPage.jsx";
 //context
-import { RecipeProvider } from "../context/recipe/RecipeProvider";
+import { RecipeProvider } from "./context/recipe/RecipeProvider";
 
 export const Pages = () => {
   return (
     <RecipeProvider>
+      s
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" index element={<Home />} />
