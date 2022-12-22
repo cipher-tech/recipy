@@ -1,10 +1,9 @@
-import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Layout } from "../../Layout";
 //pages
 import { Home } from "./home/Home";
 import { RecipeDetail } from "./recipeDetail/RecipeDetail";
-import { RecipesPage } from "./recipesPage/RecipesPage";
+import { RecipesPage } from "./recipesPage/RecipesPage.jsx";
 //context
 import { RecipeProvider } from "../context/recipe/RecipeProvider";
 
