@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import { Pages } from "./pages/Pages";
+import { Pages } from "./Pages";
 export const App = () => {
   return (
     <Fragment>

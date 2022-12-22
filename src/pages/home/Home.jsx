@@ -1,11 +1,10 @@
 import React from "react";
 import { SearchForm } from "../../components/form/searchForm/SearchForm";
-import './home.scss'
+import "./home.scss";
 
 export const Home = () => {
   return (
-    <section >
-     
+    <section>
       <SearchForm />
     </section>
   );
