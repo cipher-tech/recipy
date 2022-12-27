@@ -10,7 +10,6 @@ import { RecipeProvider } from "./context/recipe/RecipeProvider";
 export const Pages = () => {
   return (
     <RecipeProvider>
-      s
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" index element={<Home />} />
