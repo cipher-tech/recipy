@@ -1,5 +1,15 @@
 {
-      "extends": ["plugin:storybook/recommended", "eslint:recommended"],
+      "extends": [
+            // "plugin:storybook/recommended",
+            "react",
+            "eslint:recommended",
+            "eslint:recommended",
+            "plugin:react/recommended",
+            "plugin:import/recommended",
+            "plugin:jsx-a11y/recommended",
+            "eslint-config-prettier"
+      ],
+
       "globals": {
             "React": "readonly"
       },
@@ -11,5 +21,15 @@
                         "storybook/hierarchy-separator": "error"
                   }
             }
-      ]
+      ],
+      "rules": {
+            "no-console": "warn",
+            "react/prop-types": "off",
+            "react/self-closing-comp": "warn"
+      },
+      "settings": {
+            "react": {
+                  "version": "detect"
+            }
+      }
 }

@@ -1,10 +1,10 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
+import { Pages } from './Pages';
 
-import { Pages } from "./Pages";
 export const App = () => {
-  return (
-    <Fragment>
-      <Pages />
-    </Fragment>
-  );
+      return (
+            <Fragment>
+                  <Pages />
+            </Fragment>
+      );
 };

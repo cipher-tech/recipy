@@ -48,7 +48,6 @@ export const SearchForm = () => {
                         />
                         <span className="clear-btn">
                               <i>X</i>
-                          
                         </span>
                   </form>
             </Fragment>
