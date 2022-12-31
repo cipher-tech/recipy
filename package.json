@@ -12,7 +12,9 @@
             "dev": "vite",
             "build": "vite build",
             "preview": "vite preview",
-            "lint": "eslint . --ext .ts,.tsx, .js, .jsx",
+            "lint:fix": "eslint --ext .ts,.tsx,.js,.jsx --fix --ignore-path ./.gitignore",
+            "lint:format": "prettier  --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
+            "lint": "yarn lint:format && yarn lint:fix ",
             "prepare": "husky install",
             "storybook": "start-storybook -p 6006",
             "build-storybook": "build-storybook"

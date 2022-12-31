@@ -1,18 +1,19 @@
 {
       "extends": [
-            // "plugin:storybook/recommended",
+            "plugin:storybook/recommended",
             "react",
-            "eslint:recommended",
             "eslint:recommended",
             "plugin:react/recommended",
             "plugin:import/recommended",
             "plugin:jsx-a11y/recommended",
-            "eslint-config-prettier"
+            "eslint-config-prettier",
+            "prettier"
       ],
 
       "globals": {
             "React": "readonly"
       },
+
       "overrides": [
             {
                   "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],

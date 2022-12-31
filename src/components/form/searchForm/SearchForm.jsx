@@ -1,7 +1,6 @@
 import React, { useState, useEffect, Fragment, useContext } from 'react';
 import { RecipeContext } from '../../../context/recipe/RecipeProvider';
-import { Icon } from '../../atoms/icon/Icon';
-import './searchForm.scss';
+import './SearchForm.scss';
 
 export const SearchForm = () => {
       //context hook
