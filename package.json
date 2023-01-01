@@ -2,13 +2,11 @@
       "name": "recipy",
       "private": true,
       "version": "0.0.0",
-      "type": "module",
       "engines": {
             "node": ">=14.0.0",
             "yarn": ">=1.22.0",
             "npm": "please-use-yarn"
       },
-      "main": "./dist/",
       "scripts": {
             "dev": "vite",
             "build": "vite build",
