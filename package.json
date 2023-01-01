@@ -12,7 +12,7 @@
             "dev": "vite",
             "build": "vite build",
             "preview": "vite preview",
-            "lint:fix": "eslint --ext .ts,.tsx,.js,.jsx --fix --ignore-path ./.gitignore",
+            "lint:fix": "eslint --ext .ts,.tsx,.js,.jsx --ignore-path ./.gitignore",
             "lint:format": "prettier  --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
             "lint": "yarn lint:format && yarn lint:fix ",
             "prepare": "husky install",
