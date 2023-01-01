@@ -1,11 +1,25 @@
 import { Fragment } from 'react';
-// import { Pages } from './Pages';
-import { Pages } from '../src/Pages';
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from '../Layout';
+import { Home } from './pages/home/Home';
+import { RecipeDetail } from './pages/recipeDetail/RecipeDetail';
+import { RecipesPage } from './pages/recipesPage/RecipesPage';
 
-export const App = () => {
+export const Pages = () => {
       return (
-            <Fragment>
-                  <Pages />
+        <Fragment>
+            <RecipeProvider>
+                  <Routes>
+                        <Route path="/" element={<Layout />}>
+                              <Route path="/" index element={<Home />} />
+                              <Route path="recipes" element={<RecipesPage />} />
+                              <Route
+                                    path="recipes/:id"
+                                    element={<RecipeDetail/>}
+                              />
+                        </Route>
+                  </Routes>
+            </RecipeProvider>
             </Fragment>
       );
 };
