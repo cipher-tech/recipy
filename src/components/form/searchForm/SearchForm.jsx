@@ -1,7 +1,6 @@
 import React, { useState, useEffect, Fragment, useContext } from 'react';
 import { RecipeContext } from '../../../context/recipe/RecipeProvider';
-import './SearchForm.scss';
-
+// import './SearchForm.scss';
 export const SearchForm = () => {
       //context hook
       const { getSearchRecipes } = useContext(RecipeContext);
