@@ -1,51 +1,51 @@
-@import "../../../styles/abstract/mixin";
+@import '../../../styles/abstract/mixin';
 
 .search {
-  &-form {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 10rem;
-    padding: 0 3rem 0 3rem;
-    transition: all 0.3s;
-    border: 1px solid black;
-    margin-bottom: 2rem;
+      &-form {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10rem;
+            padding: 0 3rem 0 3rem;
+            transition: all 0.3s;
+            border: 1px solid black;
+            margin-bottom: 2rem;
 
-    &:focus-within {
-      box-shadow: 0 1rem 5rem rgba(36, 106, 60, 0.15);
-      transform: translateY(-3px);
-    }
-  }
+            &:focus-within {
+                  box-shadow: 0 1rem 5rem rgba(36, 106, 60, 0.15);
+                  transform: translateY(-3px);
+            }
+      }
 
-  &-field {
-    border: none;
-    background: transparent;
-    font-family: inherit;
-    color: inherit;
-    font-size: 1.7rem;
-    width: 100%;
-    border: none;
-    outline: none;
-    padding: 1rem;
-  }
+      &-field {
+            border: none;
+            background: transparent;
+            font-family: inherit;
+            color: inherit;
+            font-size: 1.7rem;
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 1rem;
+      }
 
-  &-btn {
-    font-weight: 700;
-    border-radius: 10rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 1.2rem 3.2rem;
-    transition: all 0.3s;
-    background: green;
-    border: none;
+      &-btn {
+            font-weight: 700;
+            border-radius: 10rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            padding: 1.2rem 3.2rem;
+            transition: all 0.3s;
+            background: green;
+            border: none;
 
-    display: flex;
-    align-items: center;
-  }
+            display: flex;
+            align-items: center;
+      }
 }
 
 .clear-btn {
-  border: 1px solid black;
-  padding: 1rem;
-  border-radius: 50%;
+      border: 1px solid black;
+      padding: 1rem;
+      border-radius: 50%;
 }

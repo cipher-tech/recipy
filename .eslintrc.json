@@ -1,0 +1,36 @@
+{
+      "extends": [
+            "plugin:storybook/recommended",
+            "react",
+            "eslint:recommended",
+            "plugin:react/recommended",
+            "plugin:import/recommended",
+            "plugin:jsx-a11y/recommended",
+            "eslint-config-prettier",
+            "prettier"
+      ],
+
+      "globals": {
+            "React": "readonly"
+      },
+
+      "overrides": [
+            {
+                  "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
+                  "rules": {
+                        // example of overriding a rule
+                        "storybook/hierarchy-separator": "error"
+                  }
+            }
+      ],
+      "rules": {
+            "no-console": "warn",
+            "react/prop-types": "off",
+            "react/self-closing-comp": "warn"
+      },
+      "settings": {
+            "react": {
+                  "version": "detect"
+            }
+      }
+}
