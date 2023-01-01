@@ -3,9 +3,9 @@ import { Layout } from '../Layout';
 //pages
 import { Home } from './pages/home/Home';
 import { RecipeDetail } from './pages/recipeDetail/RecipeDetail';
-import { RecipesPage } from './pages/recipesPage/RecipesPage.jsx';
 //context
 import { RecipeProvider } from './context/recipe/RecipeProvider';
+import { RecipesPage } from './pages/recipesPage/RecipesPage';
 
 export const Pages = () => {
       return (
